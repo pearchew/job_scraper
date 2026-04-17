@@ -1,50 +1,50 @@
-Company,Platform,API Endpoint,Diagnostic Reason
-HashKey Group,Unknown,N/A,Server rejected request (HTTP 404)
-Crypto.com,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-OKX,Unknown,N/A,Server rejected request (HTTP 404)
-Chainalysis,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-Airwallex,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-Octopus Cards Limited,Unknown,N/A,Needs manual Network Tab review
-Stripe,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-Checkout.com,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-PayPal,Unknown,N/A,Needs manual Network Tab review
-Visa,Unknown,N/A,Server rejected request (HTTP 404)
-Mastercard,Workday,N/A,Enterprise System (Manual API extraction needed)
-Reap,Unknown,N/A,Blocked by Cloudflare/Anti-Bot (Error 403)
-AQUMON,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-Endowus,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-Syfe,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-StashAway,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-Goldman Sachs,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-Morgan Stanley,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-J.P. Morgan,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-Citi,Eightfold.ai,N/A,Enterprise AI System (Manual API extraction needed - like HSBC)
-Bank of America,Workday,N/A,Enterprise System (Manual API extraction needed)
-UBS,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-Barclays,Workday,N/A,Enterprise System (Manual API extraction needed)
-BNP Paribas,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-Societe Generale,Oracle Taleo,N/A,Legacy Enterprise System (Very hard to scrape)
-HSBC,Eightfold.ai,N/A,Enterprise AI System (Manual API extraction needed - like HSBC)
-Standard Chartered,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-Bank of China (Hong Kong),Unknown,N/A,Needs manual Network Tab review
-Hang Seng Bank,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-DBS Bank,Workday,N/A,Enterprise System (Manual API extraction needed)
-OCBC,Oracle Taleo,N/A,Legacy Enterprise System (Very hard to scrape)
-Jane Street,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-Optiver,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-Citadel Securities,Unknown,N/A,Blocked by Cloudflare/Anti-Bot (Error 403)
-Flow Traders,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-Point72,Greenhouse,https://boards-api.greenhouse.io/v1/boards/point72/jobs,✅ Direct API Generated
-BlackRock,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-Vanguard,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-Fidelity,Unknown,N/A,Needs manual Network Tab review
-PwC,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-EY,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-Deloitte,Unknown,N/A,Needs manual Network Tab review
-KPMG,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-McKinsey & Company,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-Bloomberg,Unknown,N/A,Blocked by Cloudflare/Anti-Bot (Error 403)
-IBM,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
-HKMA,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-SFC,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
-HKEX,Unknown,N/A,Server rejected request (HTTP 404)
+Company,Platform,API Endpoint,Scraping Logic
+HashKey Group,Unknown,N/A,N/A
+Crypto.com,Lever,https://api.lever.co/v0/postings/crypto?mode=json,Standard Lever API. HTTP GET request. Data Path: Root level [array]. Field Mapping: title = 'text'; location = 'location'; link = 'hostedUrl'.
+OKX,Greenhouse,https://boards-api.greenhouse.io/v1/boards/okx/jobs,Standard Greenhouse Public API. HTTP GET request. Data Path: Response JSON -> 'jobs' [array]. Field Mapping: title = 'title'; location = 'location.name'; link = 'absolute_url'; updated_at = 'updated_at'.
+Airwallex,Unknown,,
+Octopus Cards Limited,Unknown,,
+Stripe,Unknown,,
+Checkout.com,Unknown,,
+PayPal,Unknown,,
+Visa,Unknown,,
+Mastercard,Workday,,
+Reap,Unknown,,
+AQUMON,Unknown,,
+Endowus,Unknown,,
+Syfe,Unknown,,
+StashAway,Unknown,,
+Goldman Sachs,Unknown,,
+Morgan Stanley,Unknown,,
+J.P. Morgan,Unknown,,
+Citi,Eightfold.ai,,
+Bank of America,Workday,,
+UBS,Unknown,,
+Barclays,Workday,,
+BNP Paribas,Unknown,,
+Societe Generale,Oracle Taleo,,
+HSBC,Eightfold.ai,https://portal.careers.hsbc.com/api/apply/v2/jobs?domain=hsbc.com,"HTTP GET request. Pagination: Append '&start=[offset]' to endpoint, incrementing by 10 per page until 'positions' array is empty. Data Path: Response JSON -> 'positions' [array]. Field Mapping: title = 'name'; location = 'location'; link = 'canonicalPositionUrl'; unique_id = 'id'."
+Standard Chartered,Unknown,,
+Bank of China (Hong Kong),Unknown,,
+Hang Seng Bank,Unknown,,
+DBS Bank,Workday,,
+OCBC,Oracle Taleo,,
+Jane Street,Unknown,,
+Optiver,Unknown,,
+Citadel Securities,Unknown,,
+Flow Traders,Unknown,,
+Point72,Greenhouse,https://boards-api.greenhouse.io/v1/boards/point72/jobs,
+BlackRock,Unknown,,
+Vanguard,Unknown,,
+Fidelity,Unknown,,
+PwC,Unknown,,
+EY,Unknown,,
+Deloitte,Unknown,,
+KPMG,Unknown,,
+McKinsey & Company,Unknown,,
+Bloomberg,Unknown,,
+IBM,Unknown,,
+HKMA,Unknown,,
+SFC,Unknown,,
+HKEX,Unknown,,
+Chainalysis,Ashby,https://api.ashbyhq.com/posting-api/job-board/chainalysis-careers,Standard Ashby Public API (GET). Path: json -> 'jobs'. Mapping: title='title'; loc='location'; link='jobUrl'.
