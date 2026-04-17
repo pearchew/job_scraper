@@ -1,0 +1,50 @@
+Company,Platform,API Endpoint,Diagnostic Reason
+HashKey Group,Unknown,N/A,Server rejected request (HTTP 404)
+Crypto.com,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+OKX,Unknown,N/A,Server rejected request (HTTP 404)
+Chainalysis,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+Airwallex,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+Octopus Cards Limited,Unknown,N/A,Needs manual Network Tab review
+Stripe,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+Checkout.com,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+PayPal,Unknown,N/A,Needs manual Network Tab review
+Visa,Unknown,N/A,Server rejected request (HTTP 404)
+Mastercard,Workday,N/A,Enterprise System (Manual API extraction needed)
+Reap,Unknown,N/A,Blocked by Cloudflare/Anti-Bot (Error 403)
+AQUMON,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+Endowus,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+Syfe,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+StashAway,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+Goldman Sachs,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+Morgan Stanley,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+J.P. Morgan,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+Citi,Eightfold.ai,N/A,Enterprise AI System (Manual API extraction needed - like HSBC)
+Bank of America,Workday,N/A,Enterprise System (Manual API extraction needed)
+UBS,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+Barclays,Workday,N/A,Enterprise System (Manual API extraction needed)
+BNP Paribas,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+Societe Generale,Oracle Taleo,N/A,Legacy Enterprise System (Very hard to scrape)
+HSBC,Eightfold.ai,N/A,Enterprise AI System (Manual API extraction needed - like HSBC)
+Standard Chartered,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+Bank of China (Hong Kong),Unknown,N/A,Needs manual Network Tab review
+Hang Seng Bank,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+DBS Bank,Workday,N/A,Enterprise System (Manual API extraction needed)
+OCBC,Oracle Taleo,N/A,Legacy Enterprise System (Very hard to scrape)
+Jane Street,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+Optiver,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+Citadel Securities,Unknown,N/A,Blocked by Cloudflare/Anti-Bot (Error 403)
+Flow Traders,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+Point72,Greenhouse,https://boards-api.greenhouse.io/v1/boards/point72/jobs,✅ Direct API Generated
+BlackRock,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+Vanguard,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+Fidelity,Unknown,N/A,Needs manual Network Tab review
+PwC,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+EY,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+Deloitte,Unknown,N/A,Needs manual Network Tab review
+KPMG,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+McKinsey & Company,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+Bloomberg,Unknown,N/A,Blocked by Cloudflare/Anti-Bot (Error 403)
+IBM,Unknown,N/A,Warning: ATS is likely hidden inside an iFrame on the page.
+HKMA,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+SFC,Unknown,N/A,Custom built site - or relies on Email/LinkedIn applications.
+HKEX,Unknown,N/A,Server rejected request (HTTP 404)
